@@ -34,7 +34,6 @@ export class SongsController {
   }
   @Get(':id')
   findOne(
-    // @Param('id', ParseIntPipe)  //option 1
     @Param(
       'id',
       new ParseIntPipe({ errorHttpStatusCode: HttpStatus.NOT_ACCEPTABLE }),
