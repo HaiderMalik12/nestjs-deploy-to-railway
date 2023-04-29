@@ -8,15 +8,17 @@ import {
   HttpStatus,
   Param,
   ParseIntPipe,
+  Body,
 } from '@nestjs/common';
 import { SongsService } from './songs.service';
+import { CreateSongDTO } from './dto/create-song-dto';
 
 @Controller('songs')
 export class SongsController {
   constructor(private songsService: SongsService) {}
   @Post()
-  create() {
-    return this.songsService.create('Animals by Martin Garrix');
+  create(@Body() createSongDTO: CreateSongDTO) {
+    return this.songsService.create(createSongDTO);
   }
   @Get()
   findAll() {
