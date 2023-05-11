@@ -5,7 +5,8 @@ import { AppService } from './app.service';
 import { LoggerMiddleware } from './common/middleware/logger.middleware';
 import { SongsController } from './songs/songs.controller';
 import { SongsModule } from './songs/songs.module';
-import { DataSource } from 'typeorm';
+import { Song } from './songs/song.entity';
+// import { DataSource } from 'typeorm';
 
 @Module({
   imports: [
@@ -16,7 +17,7 @@ import { DataSource } from 'typeorm';
       port: 5432,
       username: 'postgres',
       password: 'root',
-      entities: [],
+      entities: [Song],
       synchronize: true,
     }),
     SongsModule,
@@ -25,8 +26,8 @@ import { DataSource } from 'typeorm';
   providers: [AppService],
 })
 export class AppModule implements NestModule {
-  constructor(private dataSource: DataSource) {
-    console.log('dbName ', dataSource.driver.database);
+  constructor(/*private dataSource: DataSource*/) {
+    // console.log('dbName ', dataSource.driver.database);
   }
   configure(consumer: MiddlewareConsumer) {
     // consumer.apply(LoggerMiddleware).forRoutes('songs'); // option no 1
