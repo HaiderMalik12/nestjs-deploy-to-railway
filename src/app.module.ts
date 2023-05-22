@@ -11,12 +11,14 @@ import { User } from './users/user.entity';
 import { Playlist } from './playlists/playlist.entity';
 import { PlayListModule } from './playlists/playlists.module';
 // import { DataSource } from 'typeorm';
+import { AuthModule } from './auth/auth.module';
+import { UsersModule } from './users/users.module';
 
 @Module({
   imports: [
     TypeOrmModule.forRoot({
       type: 'postgres',
-      database: 'spotify-clone',
+      database: 'spotify-clone-01',
       host: 'localhost',
       port: 5432,
       username: 'postgres',
@@ -26,6 +28,8 @@ import { PlayListModule } from './playlists/playlists.module';
     }),
     SongsModule,
     PlayListModule,
+    AuthModule,
+    UsersModule,
   ],
   controllers: [AppController],
   providers: [AppService],
