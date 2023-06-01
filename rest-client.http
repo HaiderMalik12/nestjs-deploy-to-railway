@@ -83,7 +83,7 @@ POST http://localhost:3000/auth/login
 Content-Type: application/json
 
 {
-    "email": "martingarrix@gmail.com",
+    "email": "martingarrix1@gmail.com",
     "password": "123456"
 }
 
@@ -127,3 +127,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4xM
 ### Access Profile
 GET http://localhost:3000/auth/profile
 Authorization: Bearer 17838da8-99a7-443f-89fa-ba7338581ee0
+
+### Test Env
+
+GET http://localhost:3000/auth/test
