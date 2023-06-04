@@ -95,7 +95,7 @@ POST http://localhost:3000/auth/login
 Content-Type: application/json
 
 {
-    "email": "john12@gmail.com",
+    "email": "martingarrix@gmail.com",
     "password": "123456"
 }
 
@@ -104,15 +104,15 @@ Content-Type: application/json
 ### Profile
 
 GET http://localhost:3000/profile
-Authorization: Bearer  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hcnRpbmdhcnJpeEBnbWFpbC5jb20iLCJ1c2VySWQiOjIsImFydGlzdElkIjoxLCJpYXQiOjE2ODQ5MDkwNzIsImV4cCI6MTY4NDk5NTQ3Mn0.wYEhyDMor-bs2_Ghmcno0mEJqkqkP9XwOrKUDf0YAZc
+Authorization: Bearer  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hcnRpbmdhcnJpeEBnbWFpbC5jb20iLCJ1c2VySWQiOjQ2LCJpYXQiOjE2ODU3ODYzODksImV4cCI6MTY4NTg3Mjc4OX0.dxUxLCYS8YFLGkVXMu85DMJy5ev1CJGj_vP7Qx8v8hA
 
 ### Enable 2FA
 GET http://localhost:3000/auth/enable-2fa
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4xMkBnbWFpbC5jb20iLCJ1c2VySWQiOjEsImlhdCI6MTY4NDkxMTk3OCwiZXhwIjoxNjg0OTk4Mzc4fQ.qbBHZfu0VL_tY_bC2ccl1I_Xoc0IqG6wAk-D2-tZDa8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hcnRpbmdhcnJpeEBnbWFpbC5jb20iLCJ1c2VySWQiOjQ2LCJpYXQiOjE2ODU3ODYzODksImV4cCI6MTY4NTg3Mjc4OX0.dxUxLCYS8YFLGkVXMu85DMJy5ev1CJGj_vP7Qx8v8hA
 
 ### Validate 2FA Token
 POST http://localhost:3000/auth/validate-2fa
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpvaG4xMkBnbWFpbC5jb20iLCJ1c2VySWQiOjEsImlhdCI6MTY4NDkxMTk3OCwiZXhwIjoxNjg0OTk4Mzc4fQ.qbBHZfu0VL_tY_bC2ccl1I_Xoc0IqG6wAk-D2-tZDa8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1hcnRpbmdhcnJpeEBnbWFpbC5jb20iLCJ1c2VySWQiOjQ2LCJpYXQiOjE2ODU3ODYzODksImV4cCI6MTY4NTg3Mjc4OX0.dxUxLCYS8YFLGkVXMu85DMJy5ev1CJGj_vP7Qx8v8hA
 Content-Type: application/json
 
 {
