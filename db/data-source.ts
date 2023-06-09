@@ -35,7 +35,7 @@ export const dataSourceOptions: DataSourceOptions = {
   port: parseInt(process.env.DB_PORT),
   username: process.env.USERNAME,
   database: process.env.DB_NAME,
-  password: process.env.DB_PASSWORD,
+  password: process.env.PASSWORD,
   entities: ['dist/**/*.entity.js'], //1
   synchronize: false, // 2
   migrations: ['dist/db/migrations/*.js'], // 3
