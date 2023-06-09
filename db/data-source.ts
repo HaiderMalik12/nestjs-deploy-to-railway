@@ -31,9 +31,9 @@ export const typeOrmAsyncConfig: TypeOrmModuleAsyncOptions = {
     };
   },
 };
-console.log(process.env.NODE_ENV);
-console.log(process.env.DB_HOST); // these variables are undefined
-console.log(process.env.PASSWORD);
+// console.log(process.env.NODE_ENV);
+// console.log(process.env.DB_HOST); // these variables are undefined
+// console.log(process.env.PASSWORD);
 
 export const dataSourceOptions: DataSourceOptions = {
   type: 'postgres',
