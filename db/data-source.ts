@@ -9,6 +9,9 @@ import { Song } from 'src/songs/song.entity';
 import { User } from 'src/users/user.entity';
 import { DataSource, DataSourceOptions } from 'typeorm';
 
+//LOAD Environment Variables
+require('dotenv').config();
+
 export const typeOrmAsyncConfig: TypeOrmModuleAsyncOptions = {
   imports: [ConfigModule],
   inject: [ConfigService],
@@ -28,6 +31,9 @@ export const typeOrmAsyncConfig: TypeOrmModuleAsyncOptions = {
     };
   },
 };
+console.log(process.env.NODE_ENV);
+console.log(process.env.DB_HOST); // these variables are undefined
+console.log(process.env.PASSWORD);
 
 export const dataSourceOptions: DataSourceOptions = {
   type: 'postgres',
